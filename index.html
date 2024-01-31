@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Git Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+			
+			body {
+			  margin: 0;
+			  font-family: Arial;
+			}
+			
+			/* The grid: Four equal columns that floats next to each other */
+			.column {
+			  float: left;
+			  width: 25%;
+			  padding: 10px;
+			}
+			
+			/* Style the images inside the grid */
+			.column img {
+			  opacity: 0.8; 
+			  cursor: pointer; 
+			}
+			
+			.column img:hover {
+			  opacity: 1;
+			}
+			
+			/* Clear floats after the columns */
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			
+			/* The expanding image container */
+			.container {
+			  position: relative;
+			  display: none;
+			}
+			
+			/* Expanding image text */
+			#imgtext {
+			  position: absolute;
+			  bottom: 15px;
+			  left: 15px;
+			  color: white;
+			  font-size: 20px;
+			}
+			
+			/* Closable button inside the expanded image */
+			.closebtn {
+			  position: absolute;
+			  top: 10px;
+			  right: 15px;
+			  color: white;
+			  font-size: 35px;
+			  cursor: pointer;
+			}
+			</style>
+	</head>
+	<script>
+		function myFunction(imgs,expandedImg,imgtext) {
+		  var expandImg = document.getElementById(expandedImg);
+		  var imgText = document.getElementById(imgtext);
+		  expandImg.src = imgs.src;
+		  imgText.innerHTML = imgs.alt;
+		  expandImg.parentElement.style.display = "block";
+		}
+		</script>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>MY PORTFOLIO</h1>
+						<p>These is a showcase of my experiences and skills.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">PORTFOLIO</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">This is my Portfolio</a></li>
+
+						</ul>
+						<ul class="icons">
+							
+							<li><a href="https://www.linkedin.com/in/verachai-lertpongvipusana-2497a91ab/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									
+									<h2>VERACHAI LERTPONGVIPUSANA (RAY)</h2>
+									<h3>WALK-IN EXAM SYSTEM</h3>
+									<p>Web application developed for Sukhothai Thammathirat Open University.
+										This project included a number of sub-module web applications, including Registration, Exam Form Creator, Exam Result Analysis, and Electronic Examination. In addition, an integration module (web service) that communicates between WALK-IN EXAM System and Examination Register System Using REST API  
+										.</p>
+								</header>
+								
+								<div class="row">
+									<div class="column">
+									  <img src="images/pic01.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
+									</div>
+									<div class="column">
+									  <img src="images/pic01-2.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
+									</div>
+									<div class="column">
+									  <img src="images/pic01-3.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
+									</div>
+									<div class="column">
+									  <img src="images/pic01-4.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
+									</div>
+								  </div>
+								  
+								  <div class="container">
+									<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+									<img id="expandedImg" style="width:100%">
+									<div id="imgtext"></div>
+								  </div>
+								
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<header>
+										
+										<h2><a href="#">Employee time attendance management 
+										</a></h2>
+									</header>
+									<p>a web application based on Employee time attendance management for a business. The application is developed on a web-based application which can access through an internet browser. The application will access and store data in an online database (firebase).</p>
+									
+									<div class="row">
+										<div class="column">
+										  <img src="images/pic02.png"  style="width:100%" onclick="myFunction(this,'expandedImg2','imgtext2');">
+										</div>
+										<div class="column">
+										  <img src="images/pic02-2.png"  style="width:100%" onclick="myFunction(this,'expandedImg2','imgtext2');">
+										</div>
+										<div class="column">
+										  <img src="images/pic02-3.png"  style="width:100%" onclick="myFunction(this,'expandedImg2','imgtext2');">
+										</div>
+										<div class="column">
+										  <img src="images/pic02-4.png"  style="width:100%" onclick="myFunction(this,'expandedImg2','imgtext2');">
+										</div>
+									  </div>
+									  
+									  <div class="container">
+										<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+										<img id="expandedImg2" style="width:100%">
+										<div id="imgtext2"></div>
+									  </div>
+									<ul class="actions special">
+										<li><a href="https://github.com/verachai2527/employee_schedule_management" class="button">Soure Code</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										
+										<h2>Online Food Ordering</h2>
+									</header>
+									<p>an online food ordering for a café on the android platform using flutter and dart language. The application is mobile-based online ordering food. The application can access an online database (firebase) to store and receive the café products and user accounts data. The application will have an interface that can show a variety list of food and drinks that customer can select and pay through a credit card payment interface. </p>
+									
+									<div class="row">
+										<div class="column">
+										  <img src="images/pic03.jpg"  style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										</div>
+										<div class="column">
+										  <img src="images/pic03-2.jpg"  style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										</div>
+										<div class="column">
+										  <img src="images/pic03-3.jpg" style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										</div>
+										<div class="column">
+										  <img src="images/pic03-4.jpg"  style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										</div>
+										<div class="column">
+											<img src="images/pic03-5.jpg"  style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										  </div>
+										  <div class="column">
+											<img src="images/pic03-6.jpg"  style="width:100%" onclick="myFunction(this,'expandedImg3','imgtext3');">
+										  </div>
+									  </div>
+									  
+									  <div class="container">
+										<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+										<img id="expandedImg3" style="width:100%">
+										<div id="imgtext3"></div>
+									  </div>
+									<ul class="actions special">
+										<li><a href="https://github.com/verachai2527/online_food_ordering" class="button">Source Code</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										
+										<h2>Web API for London Tourist Attraction</h2>
+									</header>
+									
+									<p>a small project for learning to be able to use web APIs to display the data.</p>
+									<div class="row">
+										<div class="column">
+										  <img src="images/pic04.png"  style="width:100%" onclick="myFunction(this,'expandedImg4','imgtext4');">
+										</div>
+										<div class="column">
+										  <img src="images/pic04-2.png"  style="width:100%" onclick="myFunction(this,'expandedImg4','imgtext4');">
+										</div>
+										<div class="column">
+										  <img src="images/pic04-3.png" style="width:100%" onclick="myFunction(this,'expandedImg4','imgtext4');">
+										</div>
+										<div class="column">
+										  <img src="images/pic04-4.png"  style="width:100%" onclick="myFunction(this,'expandedImg4','imgtext4');">
+										</div>
+										
+									  </div>
+									  
+									  <div class="container">
+										<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+										<img id="expandedImg4" style="width:100%">
+										<div id="imgtext4"></div>
+									  </div>
+									<ul class="actions special">
+										<li><a href="https://github.com/verachai2527/london_tourist_attractions" class="button">Source Code</a></li>
+									</ul>
+								</article>
+								<article></article>
+								
+							</section>
+
+						
+
+					</div>
+
+				
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
