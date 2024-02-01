@@ -65,6 +65,46 @@
 			  font-size: 35px;
 			  cursor: pointer;
 			}
+
+			/*//////////////*/
+			.gallery {
+				margin: auto;
+			--g: 6px; /* the gap */
+			
+			display: grid;
+			width: 450px; /* the size */
+			aspect-ratio: 1;
+			grid: auto-flow 1fr/repeat(3,1fr);
+			gap: var(--g);
+			}
+			.gallery img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: grayscale();
+			cursor: pointer;
+			transition: .5s
+			}
+			.gallery img:hover {
+			filter: grayscale(0);
+			}
+			.gallery img:nth-child(2) {
+			grid-area: 1/2/span 2/span 2;
+			clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + var(--g)/4) 100%,0 calc(50% - var(--g)/4))
+			}
+			.gallery img:nth-child(3) {
+			grid-area: 2/1/span 2/span 2;
+			clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
+			}
+
+			body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-content: center;
+			background: #81A8B8;
+			}
+/*//////////////*/
 			</style>
 	</head>
 	<script>
@@ -117,26 +157,16 @@
 									
 									<h2>VERACHAI LERTPONGVIPUSANA (RAY)</h2>
 									<h3>WALK-IN EXAM SYSTEM</h3>
-									<p>Web application developed for Sukhothai Thammathirat Open University.
-										This project included a number of sub-module web applications, including Registration, Exam Form Creator, Exam Result Analysis, and Electronic Examination. In addition, an integration module (web service) that communicates between WALK-IN EXAM System and Examination Register System Using REST API  
-										.</p>
+									<p>A Java-based web application was developed for Sukhothai Thammathirat Open University. This project included several sub-module web applications, such as Registration, Exam Form Creator, Exam Result Analysis, and Electronic Examination. The web application was built on the JSF framework and used Hibernate to connect to MSSQL. Additionally, there was an integration module (web service) that facilitated communication between the WALK-IN EXAM System and the Examination Register System using REST API.</p>
 								</header>
-								
-								<div class="row">
-									<div class="column">
-									  <img src="images/pic01.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
-									</div>
-									<div class="column">
-									  <img src="images/pic01-2.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
-									</div>
-									<div class="column">
-									  <img src="images/pic01-3.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
-									</div>
-									<div class="column">
-									  <img src="images/pic01-4.png"  style="width:100%" onclick="myFunction(this,'expandedImg','imgtext');">
-									</div>
+								<div class="gallery">
+									<img src="images/pic01.png" onclick="myFunction(this,'expandedImg','imgtext');">
+									<img src="images/pic01-2.png" onclick="myFunction(this,'expandedImg','imgtext');">
+									<img src="images/pic01-3.png" onclick="myFunction(this,'expandedImg','imgtext');">
+									<img src="images/pic01-4.png" onclick="myFunction(this,'expandedImg','imgtext');">
 								  </div>
-								  
+								
+								</br>
 								  <div class="container">
 									<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 									<img id="expandedImg" style="width:100%">
@@ -150,10 +180,9 @@
 								<article>
 									<header>
 										
-										<h2><a href="#">Employee time attendance management 
-										</a></h2>
+										<h3>Employee time attendance management </h3>
 									</header>
-									<p>a web application based on Employee time attendance management for a business. The application is developed on a web-based application which can access through an internet browser. The application will access and store data in an online database (firebase).</p>
+									<p>AN employee time attendance management web application for a cafe business using the Dart language. The application is developed as a web-based application accessible through an internet browser. It will access and store data in an online database (Firebase).</p>
 									
 									<div class="row">
 										<div class="column">
@@ -182,9 +211,9 @@
 								<article>
 									<header>
 										
-										<h2>Online Food Ordering</h2>
+										<h3>Online Food Ordering</h3>
 									</header>
-									<p>an online food ordering for a café on the android platform using flutter and dart language. The application is mobile-based online ordering food. The application can access an online database (firebase) to store and receive the café products and user accounts data. The application will have an interface that can show a variety list of food and drinks that customer can select and pay through a credit card payment interface. </p>
+									<p>an online food ordering for a café on the android platform using flutter and dart language. The application is mobile-based online ordering food. The application can access an online database (Firebase) to store and receive the café products and user accounts data. The application will have an interface that can show a variety list of food and drinks that customer can select and pay through a credit card payment interface. </p>
 									
 									<div class="row">
 										<div class="column">
@@ -219,10 +248,10 @@
 								<article>
 									<header>
 										
-										<h2>Web API for London Tourist Attraction</h2>
+										<h3>Web API for London Tourist Attraction</h3>
 									</header>
 									
-									<p>a small project for learning to be able to use web APIs to display the data.</p>
+									<p>A small project aimed at learning how to use web APIs to display data.</p>
 									<div class="row">
 										<div class="column">
 										  <img src="images/pic04.png"  style="width:100%" onclick="myFunction(this,'expandedImg4','imgtext4');">
@@ -258,7 +287,11 @@
 
 				
 
-			
+			<!-- Footer -->
+			<footer id="footer">
+				<br>
+				<br>
+			</footer>
 
 			</div>
 
